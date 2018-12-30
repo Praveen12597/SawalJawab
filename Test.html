@@ -1,34 +1,138 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Parallex Effect</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Parallex Effect</title>
 
-	<style type="text/css">
-		*{
-			margin: 0px;
-		}
-		#banner{
-			width: 100%;
-			height: 695px;
-			background-color: #000;
-			background-image: url(Image/planet.png), url(Image/stars.png), url(Image/3.png);
-			background-repeat: no-repeat, repeat, repeat;
-			background-position: 120% 70px, 0px 0px, 0px 0px;
-			animation: animate linear 50s infinite;
-		}
+    <style media="screen">
 
-		@keyframes animate{
-			from { background-position: 120% 70px , 0px 0px, 100px 0px;  }
-			to { background-position: -20% 70px, -900px 0px, -961px 0px; } 
-			/* -1024 because stars.png image sige is 1024px*/
-		}
+      body, html{
+        height: 100%;
+        margin: 0;
+        font-family: "lato",sans-serif;
+        font-weight: 400;
+        line-height: 1.5em;
+        /*color: #666;*/
+      }
 
-	</style>
+      .img1{
+        background-image: url("image/amazing-austria-dawn-.jpg");
+        min-height: 100%;
+      }
+      .img2{
+        background-image: url("image/adventure-clouds-cold.jpg");
+        min-height: 400px;
+      }
+      .img3{
+        background-image: url("image/dawn-daylight.jpg");
+        min-height: 400px;
+      }
 
-</head>
-<body>
-	<div id="banner">
-		<!-- <img src="Image/rocket.png"  alt="rocket" style="margin: 200px 0px 0px 40%;"> -->
-	</div>
-</body>
+      .img1, .img2, .img3 {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-attachment: fixed;
+      }
+
+      .section {
+        padding: 30px 60px;
+        text-align: center;
+      }
+
+      .section-dark{
+        background-color: #282e34;
+        color: #ddd;
+      }
+      .section-light{
+        background-color: #f4f4f4;
+        color: #666;
+      }
+
+      .text{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
+        letter-spacing: 8px;
+        color: #000;
+        font-size: 27px;
+      }
+
+      .text .border{
+        background-color: #111;
+        color: #fff;
+        padding: 10px;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="img1">
+      <div class="text">
+        <span class="border">Parallex Effect</span>
+      </div>
+    </div>
+
+    <section class="section section-light">
+      <h2>Section One</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+
+    <div class="img2">
+      <div class="text">
+        <span class="border">Image Two Text</span>
+      </div>
+    </div>
+
+    <section class="section section-dark">
+      <h2>Section Two</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+
+    <div class="img3">
+      <div class="text">
+        <span class="border">Image Three Text</span>
+      </div>
+    </div>
+
+    <section class="section section-light">
+      <h2>Section One</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+
+    <div class="img1">
+      <div class="text">
+        <span class="border">Parallex Effect</span>
+      </div>
+    </div>
+
+  </body>
 </html>
