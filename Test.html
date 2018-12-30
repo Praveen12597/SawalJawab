@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parallex Effect</title>
+
+	<style type="text/css">
+		*{
+			margin: 0px;
+		}
+		#banner{
+			width: 100%;
+			height: 695px;
+			background-color: #000;
+			background-image: url(Image/planet.png), url(Image/stars.png), url(Image/3.png);
+			background-repeat: no-repeat, repeat, repeat;
+			background-position: 120% 70px, 0px 0px, 0px 0px;
+			animation: animate linear 50s infinite;
+		}
+
+		@keyframes animate{
+			from { background-position: 120% 70px , 0px 0px, 100px 0px;  }
+			to { background-position: -20% 70px, -900px 0px, -961px 0px; } 
+			/* -1024 because stars.png image sige is 1024px*/
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="banner">
+		<!-- <img src="Image/rocket.png"  alt="rocket" style="margin: 200px 0px 0px 40%;"> -->
+	</div>
+</body>
+</html>
