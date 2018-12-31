@@ -1,3 +1,6 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 
 <html>
@@ -8,7 +11,7 @@
         <link type="text/css" rel="stylesheet" href="resources/css/font-awesome.min.css">
         <script src="resources/js/bootstrap.min.js"></script>
     </head>
-    
+
     <body>
 
         <section class="">
@@ -58,8 +61,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Community</a>
                         </li>
-                        
-                        
+
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Feeds</a>
                         </li>
@@ -165,32 +168,32 @@
                                 Gaming
                                 <span class="badge badge-dark">457k</span>
                             </li>
-                            
+
                             <li class="list-group-item py-2 active">
                                 Programming
                                 <span class="badge badge-dark">126k</span>
                             </li>
-                            
+
                             <li class="list-group-item py-2">
                                 Music
                                 <span class="badge badge-dark">85k</span>
                             </li>
-                            
+
                             <li class="list-group-item py-2">
                                 Dance
                                 <span class="badge badge-dark">45k</span>
                             </li>
-                            
+
                             <li class="list-group-item py-2">
                                 Whatever
                                 <span class="badge badge-dark">30k</span>
                             </li>
-                            
+
                             <li class="list-group-item py-2">
                                 PUBG
                                 <span class="badge badge-dark">15k</span>
                             </li>
-                            
+
                         </ul>
                         <button class="btn btn-sm btn-danger " style="margin:10px 0 0 90px;border-radius: 20px">view all</button>
                     </div>
@@ -201,3 +204,4 @@
 
     </body>
 </html>
+
