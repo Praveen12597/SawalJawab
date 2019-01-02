@@ -3,10 +3,6 @@
     border-radius: 0;
 }
 
-.bar {
-    border-color: #007bff;
-    border-radius: 0;
-}
 textarea:focus,
 input[type="text"]:focus,
 input[type="button"]:focus,
@@ -24,6 +20,17 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {   
-  box-shadow: none;
-  outline: 0 none;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.cards {
+    margin: 20px 10px 20px 10px; 
+    border: 1px solid #ced4da; 
+    padding: 5px 5px 5px 5px;
+    
 }

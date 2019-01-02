@@ -26,10 +26,9 @@ public class LoginController extends HttpServlet {
             //failed
         //}
         
-        request.getSession().setAttribute("user", new User("sagar", "***"));
-        
-        RequestDispatcher view = request.getRequestDispatcher ("index.jsp");
-        view.forward(request, response);
+        request.getSession().setAttribute("user", new User("sagar", ""));
+        System.out.println (request.getContextPath());
+        response.sendRedirect("/");
         
     }
 }
