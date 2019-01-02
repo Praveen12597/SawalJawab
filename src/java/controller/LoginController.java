@@ -19,14 +19,16 @@ public class LoginController extends HttpServlet {
         User user = null;
         UserDao dao = DaoManager.getUserDao();
         
-        if (dao.insertUser(user)){
+        //if (dao.insertUser(user)){
             //success
-        }
-        else {
+        //}
+        //else {
             //failed
-        }
+        //}
         
-        RequestDispatcher view = request.getRequestDispatcher ("WEB-INF/index.jsp");
+        request.getSession().setAttribute("user", new User("sagar", "***"));
+        
+        RequestDispatcher view = request.getRequestDispatcher ("index.jsp");
         view.forward(request, response);
         
     }
