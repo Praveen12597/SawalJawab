@@ -2,8 +2,11 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import model.User;
 
@@ -11,26 +14,46 @@ public class UserDaoSql implements UserDao {
 
     @Override
     public boolean isValidUser(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            Connection connection = Database.getConnection();
+            String sql = "select (1) from users where username = ? and password = ?";
+            PreparedStatement st = connection.prepareStatement(sql);
+            
+            st.setString(1, user.getUsername());
+            st.setString(1, user.getPassword());
+            
+            ResultSet rs = st.executeQuery();
+            
+            if (rs.next()){
+                return true;
+            }
+            
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+        
+        return false;
     }
 
     @Override
     public User getUser(String username) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
         User user = new User();
         
         try {
-            Class.forName("...");
             Connection con = Database.getConnection();
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("..." + username);
+            String sql = "select * from users where username = ?";
+            PreparedStatement st = con.prepareStatement(sql);
+            st.setString(1, username);
+            ResultSet rs = st.executeQuery();
             
             while(rs.next()){
-                user.setUsername(rs.getString("..."));
-                user.setPassword(rs.getString("..."));
+                user.setUsername(rs.getString("username"));
+                //user.setPassword(rs.getString("..."));
             }
             
-        } catch (Exception e) {
+        } catch (SQLException se) {
+            se.printStackTrace();
         }
         
         return user;
@@ -38,13 +61,38 @@ public class UserDaoSql implements UserDao {
 
     @Override
     public boolean insertUser(User user) {
-        // ststement = database.getconnection
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        
+        
+        return false;
     }
 
     @Override
     public List<User> getAllUser() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List <User> users = new ArrayList <>();
+        
+        try {
+            Connection connection = Database.getConnection();
+            String sql = "select (1) from users";
+            Statement st = connection.createStatement();
+            
+            ResultSet rs = st.executeQuery(sql);
+            
+            while (rs.next()){
+                User user = new User ();
+                user.setUsername(rs.getString("username"));
+                //user.setPassword(rs.getString("..."));
+                
+                users.add(user);
+            }
+            
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+        
+        return users;
     }
+    
+    
     
 }

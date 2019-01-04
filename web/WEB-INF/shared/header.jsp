@@ -23,6 +23,19 @@
                 max-width: 100%;
             }
 
+            .loader {
+                border: 5px solid #f3f3f3; /* Light grey */
+                border-top: 5px solid #3498db; /* Blue */
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
         </style>
 
         <script>
@@ -89,7 +102,7 @@
                         <c:if test = "${empty user}">
                             <li><button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal" style="margin: 8px 5px 0px 5px" >LOG IN</button></li>
                             <li><button class="btn btn-success" data-toggle="modal" data-target="#SignUpModal" style="margin: 8px 5px 5px 5px" >SIGN UP</button></li>
-                        </c:if>                    
+                            </c:if>                    
 
                         <c:if test="${not empty user}">
                             <li class="dropdown">
@@ -173,12 +186,12 @@
                                         <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                        <label for="exampleInputEmail2">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
                                     </div>
                                     <div>
                                         <label>
