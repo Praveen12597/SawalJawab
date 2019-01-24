@@ -93,6 +93,27 @@ public class UserDaoSql implements UserDao {
         return users;
     }
     
+    @Override
+    public boolean usernameExist (String username){
+        
+        try {
+            Connection connection = Database.getConnection();
+            String sql = "select (1) from users where username = ?";
+            
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, username);
+            
+            return ps.executeQuery().next();
+            
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+        return false;   
+    }
     
+    @Override
+    public String getEmailByUsername (String username){
+        throw new UnsupportedOperationException();
+    }
     
 }

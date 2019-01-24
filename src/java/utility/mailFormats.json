@@ -1,0 +1,4 @@
+{
+    "purpose": "forget_password",
+    "mail_content": "Hi Sagar,\nWe received a request to reset your Facebook password.\nClick here to change your password.\nAlternatively,\nyou can enter the following password reset code: 652360\n\nDidn't request this change?\nIf you didn't request a new password,\nlet us know."
+}

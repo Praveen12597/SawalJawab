@@ -137,19 +137,22 @@
                         <div class="row">
                             <div class="col-xs-2"></div>
                             <div class="col-xs-10">
-                                <form method="post" action="/login">
+                                <form id="loginForm" method="post" action="/login" onsubmit="loginFormValidator()">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">User Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="User Name" name="user" >
+                                        <label for="username">User Name</label>
+                                        <input type="text" class="form-control" id="uname" placeholder="User Name" name="user" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="pass" placeholder="Password" required>
                                     </div>
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox"> Remember Me
                                         </label>
+                                    </div>
+                                    <div>
+                                        <a href="/user/forget-password">Forget Password</a>
                                     </div>
                                     <div>
                                         <label>
@@ -180,18 +183,18 @@
                         <div class="row">
                             <div class="col-xs-2"></div>
                             <div class="col-xs-10">
-                                <form>
+                                <form id="signupForm" action="" method="post" onsubmit="signupFormValidator">
                                     <div class="form-group">
-                                        <label for="exampleInputName2">User Name</label>
-                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                                        <label for="username">User Name</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Username" onfocusout="isUsernameAvailable()" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail2">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+                                        <label for="email">Email address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Password">
                                     </div>
                                     <div>
                                         <label>
