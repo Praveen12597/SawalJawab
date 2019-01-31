@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import model.User;
+import utility.PasswordHash;
 
 public class UserDaoSql implements UserDao {
 
@@ -16,16 +17,22 @@ public class UserDaoSql implements UserDao {
     public boolean isValidUser(User user) {
         try {
             Connection connection = Database.getConnection();
-            String sql = "select (1) from users where username = ? and password = ?";
+            //String sql = "select (1) from users where username = ? and password = ?";
+            String sql = "select password from users where username = ?";
             PreparedStatement st = connection.prepareStatement(sql);
             
             st.setString(1, user.getUsername());
-            st.setString(1, user.getPassword());
+            //st.setString(1, user.getPassword());
             
             ResultSet rs = st.executeQuery();
             
-            if (rs.next()){
-                return true;
+//            if (rs.next()){
+//                return true;
+//            }
+            while(rs.next()){
+                if(PasswordHash.matchPass(user.getPassword(), rs.getString("password"))){
+                    return true;
+                }
             }
             
         } catch (SQLException se) {

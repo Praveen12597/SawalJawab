@@ -3,18 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Project/SawalJawab/src/java/dao/DaoManager.java</file>
-            <file>file:/E:/Project/SawalJawab/src/java/service/HomeCards.java</file>
-            <file>file:/E:/Project/SawalJawab/web/index.jsp</file>
+            <file>file:/E:/Project/SawalJawab/src/java/utility/MailUtil.java</file>
+            <file>file:/E:/Project/SawalJawab/src/java/ajaxServlet/HomeCards.java</file>
+            <file>file:/E:/Project/SawalJawab/src/java/utility/PasswordHash.java</file>
+            <file>file:/E:/Project/SawalJawab/web/WEB-INF/shared/footer.jsp</file>
             <file>file:/E:/Project/SawalJawab/web/resources/js/home.js</file>
-            <file>file:/E:/Project/SawalJawab/src/java/controller/LoginController.java</file>
+            <file>file:/E:/Project/SawalJawab/src/java/dao/DaoManager.java</file>
+            <file>file:/E:/Project/SawalJawab/web/WEB-INF/views/forget_password.jsp</file>
+            <file>file:/E:/Project/SawalJawab/web/index.jsp</file>
             <file>file:/E:/Project/SawalJawab/src/java/dao/UserDao.java</file>
-            <file>file:/E:/Project/SawalJawab/web/WEB-INF/dbinfo.properties</file>
-            <file>file:/E:/Project/SawalJawab/src/java/controller/DummyController.java</file>
             <file>file:/E:/Project/SawalJawab/web/WEB-INF/shared/header.jsp</file>
-            <file>file:/E:/Project/SawalJawab/src/java/model/User.java</file>
+            <file>file:/E:/Project/SawalJawab/src/java/utility/mailFormats.json</file>
+            <file>file:/E:/Project/SawalJawab/src/java/ajaxServlet/CheckUsername.java</file>
             <file>file:/E:/Project/SawalJawab/src/java/dao/UserDaoSql.java</file>
-            <file>file:/E:/Project/SawalJawab/src/java/dao/Database.java</file>
         </group>
     </open-files>
 </project-private>

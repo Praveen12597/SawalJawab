@@ -141,10 +141,12 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">User Name</label>
                                         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="User Name" name="user" >
+                                        <span style="color: red; padding-left: 30px;font-size: 1em;font-family: cursive;display: none" ></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        <span style="color: red; padding-left: 30px;font-size: 1em;font-family: cursive;display: none" ></span>
                                     </div>
                                     <div class="checkbox">
                                         <label>
@@ -184,14 +186,17 @@
                                     <div class="form-group">
                                         <label for="exampleInputName2">User Name</label>
                                         <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                                        <span style="color: red; padding-left: 30px;font-size: 1em;font-family: cursive;display: none" ></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail2">Email address</label>
                                         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+                                        <span style="color: red; padding-left: 30px;font-size: 1em;font-family: cursive;display: none" ></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                                        <span style="color: red; padding-left: 30px;font-size: 1em;font-family: cursive;display: none" ></span>
                                     </div>
                                     <div>
                                         <label>
